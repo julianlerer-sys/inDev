@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabs to Nap Privacy Policy</title>
+  <script>
+    const langMap = {
+      'es': 'privacy-es.html',
+      'en': 'privacy-en.html',
+      'fr': 'privacy-fr.html',
+      'ca': 'privacy-ca.html'
+    };
+    function redirectToLang() {
+      const userLang = navigator.language || navigator.userLanguage;
+      const lang = userLang.split('-')[0].toLowerCase();
+      const page = langMap[lang] || 'privacy-en.html';
+      window.location.replace(page);
+    }
+    function showManual() {
+      document.getElementById('loading').style.display = 'none';
+      document.getElementById('manual-select').style.display = 'block';
+    }
+    window.onload = function() {
+      setTimeout(showManual, 2500); // Show manual choice after 2.5s
+      redirectToLang();
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+      background: #f7f9fa;
+      color: #2D3A3A;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .logo {
+      width: 64px;
+      height: 64px;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+    }
+    .loading {
+      font-size: 1.2rem;
+      color: #46C18D;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    .manual-select {
+      display: none;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+    .manual-select h2 {
+      color: #F37C20;
+      font-size: 1.1rem;
+      margin-bottom: 0.7rem;
+    }
+    .lang-btn {
+      background: #46C18D;
+      color: #fff;
+      padding: 10px 22px;
+      border-radius: 8px;
+      margin: 0.3rem;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .lang-btn:hover {
+      background: #F37C20;
+    }
+  </style>
+</head>
+<body>
+  <img src="logo.png" alt="Tabs to Nap logo" class="logo">
+  <div class="loading" id="loading">
+    Detectando idioma del navegador...<br>
+    Detecting browser language...<br>
+    <span style="font-size:0.9rem; color:#888;">Si no eres redirigido, elige idioma abajo.</span>
+  </div>
+  <div class="manual-select" id="manual-select">
+    <h2>Elige tu idioma / Choose your language</h2>
+    <button class="lang-btn" onclick="window.location.href='privacy-en.html'">English</button>
+    <button class="lang-btn" onclick="window.location.href='privacy-es.html'">Español</button>
+    <button class="lang-btn" onclick="window.location.href='privacy-fr.html'">Français</button>
+    <button class="lang-btn" onclick="window.location.href='privacy-ca.html'">Català</button>
+  </div>
+</body>
+</html>
