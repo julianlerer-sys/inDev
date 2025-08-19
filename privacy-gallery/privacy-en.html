@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Gallery - Privacy Policy</title>
+    <style>
+        /* Basic Styling - Customize these colors and fonts to match Tabs Gallery */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light background, adjust to your brand color */
+            color: #333; /* Dark text, adjust to your brand color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff; /* White content background, adjust */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #8B038F; /* A shade of blue, adjust to your brand primary color */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+        ul li {
+            margin-bottom: 0.5em;
+        }
+        .logo-placeholder {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo-placeholder img {
+            max-width: 150px; /* Adjust logo size */
+            height: auto;
+        }
+        .contact-email {
+            font-weight: bold;
+            color: #8B038F; /* Adjust to your brand primary color */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                margin: 10px auto;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-placeholder">
+            <!-- Replace 'path/to/your/logo.png' with the actual path to your Tabs Gallery logo -->
+            <!-- If you don't have an image, you can remove the <img> tag and just put text like: -->
+            <!-- <h1>Tabs Gallery</h1> -->
+            <img src="logo.png" alt="Tabs Gallery Logo">
+        </div>
+
+        <h1>TABS GALLERY PRIVACY POLICY</h1>
+        <p><strong>Last Updated:</strong> August 18, 2025</p>
+
+        <p>Thank you for using Tabs Gallery. Your privacy is of utmost importance to us. This policy details the information the extension handles and the reasons for doing so.</p>
+
+        <h2>1. THE GOLDEN RULE: WE DO NOT COLLECT PERSONAL DATA</h2>
+        <p>Tabs Gallery has been designed with privacy as its fundamental principle. The extension does not collect, store, share, or transmit any personal or browsing information to our servers or to third parties.</p>
+        <p>All processing and functionality of the extension occur exclusively on your device (locally).</p>
+
+        <h2>2. INFORMATION THE EXTENSION USES (LOCALLY)</h2>
+        <p>To operate effectively, Tabs Gallery needs to access certain information from your browser. It is crucial to understand that this information never leaves your machine and is managed securely and locally:</p>
+        <ul>
+            <li><strong>URLs, Tab Titles, and Screenshots:</strong> The extension needs to know the address (URL), title, and a screenshot of a tab to be able to suspend it, display it in the visual gallery, and restore it correctly. This information is saved locally in your browser profile and is used solely for the gallery functionality and restoration.</li>
+            <li><strong>User Settings:</strong> Your preferences, such as automatic suspension time, the whitelist of websites that should not be suspended, and custom keyboard shortcuts, are saved using Chrome's storage API (<code>chrome.storage.local</code>). This data is stored exclusively in your browser profile, and we do not have access to it.</li>
+        </ul>
+
+        <h2>3. EXTENSION PERMISSIONS AND THEIR JUSTIFICATION</h2>
+        <p>Tabs Gallery requests the following permissions in your browser. We want to be completely transparent about the necessity of each one:</p>
+        <ul>
+            <li><strong><code>storage</code>:</strong> This permission allows the extension to save your configuration preferences and the data of your suspended tabs (title, URL, screenshot). All this information is stored locally in your browser and is essential for Tabs Gallery to remember your settings and the tabs you have saved.</li>
+            <li><strong><code>alarms</code>:</strong> Used to schedule the automatic suspension of tabs after a period of inactivity that you define. It functions as an internal timer for efficient memory management. It is not used to track your activity.</li>
+            <li><strong><code>contextMenus</code>:</strong> Allows us to add "Suspend tab" or "Suspend other tabs" options in the browser's context menu (right-click) and on the extension icon, facilitating quick access to its functions.</li>
+            <li><strong><code>activeTab</code>:</strong> Necessary to interact with the tab you currently have open. This includes taking screenshots for your visual gallery and obtaining its URL and title when you suspend it. This permission is only activated when you interact with the extension and only affects the active tab at that moment. It does not give us access to your browsing history or data from other tabs.</li>
+            <li><strong><code>scripting</code>:</strong> This permission, in combination with <code>activeTab</code> and <code>host_permissions</code>, is fundamental for executing necessary scripts on the tabs you are going to suspend. It allows replacing the content of the suspended tab with our placeholder page and restoring the original content when you retrieve it.</li>
+            <li><strong><code>host_permissions</code>: <code>&lt;all_urls&gt;</code> (Access to all URLs):</strong> This is a broad permission, but its use is strictly limited and justified:
+                <ul>
+                    <li><strong>Screenshots:</strong> It is essential to be able to take a screenshot of <em>any</em> webpage you decide to suspend and display it in your visual gallery.</li>
+                    <li><strong>Suspension and Restoration:</strong> Allows "replacing" the content of the suspended tab with our placeholder page and, crucially, restoring the original URL of the tab when you retrieve it.</li>
+                </ul>
+                <p><strong>Privacy Guarantee:</strong> We want to reiterate with complete clarity: <strong>Tabs Gallery DOES NOT read, collect, store, or transmit any personal data, browsing history, webpage content, passwords, or any other sensitive information about your online activity.</strong> Access to <code>&lt;all_urls&gt;</code> is used <em>exclusively</em> for the functionalities of tab screenshotting, suspension, and restoration. Your information remains in your browser, under your exclusive control. Our business model is based on offering a useful and efficient tool for tab management, not on data collection.</p>
+            </li>
+        </ul>
+
+        <h2>4. CHANGES TO THIS POLICY</h2>
+        <p>Any future updates to this policy will be communicated through the release notes in the Chrome Web Store.</p>
+
+        <h2>5. CONTACT</h2>
+        <p>If you have any questions or concerns about this Privacy Policy, please do not hesitate to contact us at <span class="contact-email">tabstonap.hurricane803@simplelogin.com</span>.</p>
+    </div>
+</body>
+</html>

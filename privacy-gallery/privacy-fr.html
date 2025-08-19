@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Gallery - Politique de Confidentialité</title>
+    <style>
+        /* Basic Styling - Customize these colors and fonts to match Tabs Gallery */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light background, adjust to your brand color */
+            color: #333; /* Dark text, adjust to your brand color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff; /* White content background, adjust */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #8B038F; /* A shade of blue, adjust to your brand primary color */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+        ul li {
+            margin-bottom: 0.5em;
+        }
+        .logo-placeholder {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo-placeholder img {
+            max-width: 150px; /* Adjust logo size */
+            height: auto;
+        }
+        .contact-email {
+            font-weight: bold;
+            color: #8B038F; /* Adjust to your brand primary color */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                margin: 10px auto;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-placeholder">
+            <!-- Replace 'path/to/your/logo.png' with the actual path to your Tabs Gallery logo -->
+            <!-- If you don't have an image, you can remove the <img> tag and just put text like: -->
+            <!-- <h1>Tabs Gallery</h1> -->
+            <img src="logo.png" alt="Logo Tabs Gallery">
+        </div>
+
+        <h1>POLITIQUE DE CONFIDENTIALITÉ DE TABS GALLERY</h1>
+        <p><strong>Dernière mise à jour :</strong> 18 août 2025</p>
+
+        <p>Nous vous remercions d'utiliser Tabs Gallery. Votre vie privée est de la plus haute importance pour nous. Cette politique détaille les informations que l'extension gère et les raisons pour lesquelles elle le fait.</p>
+
+        <h2>1. LA RÈGLE D'OR : NOUS NE COLLECTONS PAS DE DONNÉES PERSONNELLES</h2>
+        <p>Tabs Gallery a été conçue avec la confidentialité comme principe fondamental. L'extension ne collecte, ne stocke, ne partage ni ne transmet aucune information personnelle ou de navigation à nos serveurs ou à des tiers.</p>
+        <p>Tout le traitement et les fonctionnalités de l'extension se déroulent exclusivement sur votre appareil (localement).</p>
+
+        <h2>2. INFORMATIONS UTILISÉES PAR L'EXTENSION (LOCALEMENT)</h2>
+        <p>Pour fonctionner efficacement, Tabs Gallery doit accéder à certaines informations de votre navigateur. Il est crucial de comprendre que ces informations ne quittent jamais votre machine et sont gérées de manière sécurisée et locale :</p>
+        <ul>
+            <li><strong>URLs, Titres d'Onglets et Captures d'Écran :</strong> L'extension a besoin de connaître l'adresse (URL), le titre et une capture d'écran d'un onglet pour pouvoir le suspendre, l'afficher dans la galerie visuelle et le restaurer correctement. Ces informations sont enregistrées localement dans votre profil de navigateur et sont utilisées uniquement pour la fonctionnalité de la galerie et la restauration.</li>
+            <li><strong>Paramètres Utilisateur :</strong> Vos préférences, telles que le temps de suspension automatique, la liste blanche des sites web à ne pas suspendre et les raccourcis clavier personnalisés, sont enregistrées à l'aide de l'API de stockage de Chrome (<code>chrome.storage.local</code>). Ces données sont stockées exclusivement dans votre profil de navigateur, et nous n'y avons pas accès.</li>
+        </ul>
+
+        <h2>3. AUTORISATIONS DE L'EXTENSION ET LEUR JUSTIFICATION</h2>
+        <p>Tabs Gallery demande les autorisations suivantes dans votre navigateur. Nous voulons être totalement transparents quant à la nécessité de chacune d'elles :</p>
+        <ul>
+            <li><strong><code>storage</code> (Stockage) :</strong> Cette autorisation permet à l'extension d'enregistrer vos préférences de configuration et les données de vos onglets suspendus (titre, URL, capture d'écran). Toutes ces informations sont stockées localement dans votre navigateur et sont essentielles pour que Tabs Gallery se souvienne de vos paramètres et des onglets que vous avez enregistrés.</li>
+            <li><strong><code>alarms</code> (Alarmes) :</strong> Utilisée pour programmer la suspension automatique des onglets après une période d'inactivité que vous définissez. Elle fonctionne comme une minuterie interne pour une gestion efficace de la mémoire. Elle n'est pas utilisée pour suivre votre activité.</li>
+            <li><strong><code>contextMenus</code> (Menus Contextuels) :</strong> Nous permet d'ajouter les options "Suspendre l'onglet" ou "Suspendre les autres onglets" dans le menu contextuel du navigateur (clic droit) et sur l'icône de l'extension, facilitant un accès rapide à ses fonctions.</li>
+            <li><strong><code>activeTab</code> (Onglet Actif) :</strong> Nécessaire pour interagir avec l'onglet que vous avez actuellement ouvert. Cela inclut la prise de captures d'écran pour votre galerie visuelle et l'obtention de son URL et de son titre lorsque vous le suspendez. Cette autorisation n'est activée que lorsque vous interagissez avec l'extension et n'affecte que l'onglet actif à ce moment-là. Elle ne nous donne pas accès à votre historique de navigation ni aux données d'autres onglets.</li>
+            <li><strong><code>scripting</code> (Scripting) :</strong> Cette autorisation, en combinaison avec <code>activeTab</code> et <code>host_permissions</code>, est fondamentale pour exécuter les scripts nécessaires sur les onglets que vous allez suspendre. Elle permet de remplacer le contenu de l'onglet suspendu par notre page de remplacement et de restaurer le contenu original lorsque vous le récupérez.</li>
+            <li><strong><code>host_permissions</code> : <code>&lt;all_urls&gt;</code> (Accès à toutes les URLs) :</strong> Il s'agit d'une autorisation large, mais son utilisation est strictement limitée et justifiée :
+                <ul>
+                    <li><strong>Captures d'écran :</strong> Il est essentiel de pouvoir prendre une capture d'écran de <em>n'importe quelle</em> page web que vous décidez de suspendre et de l'afficher dans votre galerie visuelle.</li>
+                    <li><strong>Suspension et Restauration :</strong> Permet de "remplacer" le contenu de l'onglet suspendu par notre page de remplacement et, surtout, de restaurer l'URL originale de l'onglet lorsque vous le récupérez.</li>
+                </ul>
+                <p><strong>Garantie de Confidentialité :</strong> Nous tenons à réitérer avec une clarté totale : <strong>Tabs Gallery NE lit, ne collecte, ne stocke ni ne transmet aucune donnée personnelle, historique de navigation, contenu de page web, mot de passe ou toute autre information sensible concernant votre activité en ligne.</strong> L'accès à <code>&lt;all_urls&gt;</code> est utilisé <em>exclusivement</em> pour les fonctionnalités de capture d'écran, de suspension et de restauration des onglets. Vos informations restent dans votre navigateur, sous votre contrôle exclusif. Notre modèle commercial est basé sur l'offre d'un outil utile et efficace pour la gestion des onglets, et non sur la collecte de données.</p>
+            </li>
+        </ul>
+
+        <h2>4. MODIFICATIONS DE CETTE POLITIQUE</h2>
+        <p>Toute mise à jour future de cette politique sera communiquée via les notes de version dans le Chrome Web Store.</p>
+
+        <h2>5. CONTACT</h2>
+        <p>Si vous avez des questions ou des préoccupations concernant cette Politique de Confidentialité, n'hésitez pas à nous contacter à <span class="contact-email">tabstonap.hurricane803@simplelogin.com</span>.</p>
+    </div>
+</body>
+</html>

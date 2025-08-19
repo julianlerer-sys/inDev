@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Gallery - Política de Privacitat</title>
+    <style>
+        /* Basic Styling - Customize these colors and fonts to match Tabs Gallery */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light background, adjust to your brand color */
+            color: #333; /* Dark text, adjust to your brand color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff; /* White content background, adjust */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #8B038F; /* A shade of blue, adjust to your brand primary color */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+        ul li {
+            margin-bottom: 0.5em;
+        }
+        .logo-placeholder {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo-placeholder img {
+            max-width: 150px; /* Adjust logo size */
+            height: auto;
+        }
+        .contact-email {
+            font-weight: bold;
+            color: #8B038F; /* Adjust to your brand primary color */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                margin: 10px auto;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-placeholder">
+            <!-- Replace 'path/to/your/logo.png' with the actual path to your Tabs Gallery logo -->
+            <!-- If you don't have an image, you can remove the <img> tag and just put text like: -->
+            <!-- <h1>Tabs Gallery</h1> -->
+            <img src="logo.png" alt="Logotip Tabs Gallery">
+        </div>
+
+        <h1>POLÍTICA DE PRIVACITAT DE TABS GALLERY</h1>
+        <p><strong>Última actualització:</strong> 18 d'agost de 2025</p>
+
+        <p>Gràcies per utilitzar Tabs Gallery. La teva privacitat és de màxima importància per a nosaltres. Aquesta política detalla la informació que l'extensió gestiona i les raons per fer-ho.</p>
+
+        <h2>1. LA REGLA D'OR: NO RECOPILAM DADES PERSONALS</h2>
+        <p>Tabs Gallery ha estat dissenyada amb la privacitat com a principi fonamental. L'extensió no recopila, emmagatzema, comparteix ni transmet cap tipus d'informació personal o de navegació als nostres servidors ni als de tercers.</p>
+        <p>Tot el processament i funcionament de l'extensió es realitza exclusivament al teu dispositiu (localment).</p>
+
+        <h2>2. INFORMACIÓ QUE L'EXTENSIÓ UTILITZA (LOCALMENT)</h2>
+        <p>Per operar eficaçment, Tabs Gallery necessita accedir a certa informació del teu navegador. És crucial entendre que aquesta informació mai abandona la teva màquina i es gestiona de forma segura i local:</p>
+        <ul>
+            <li><strong>URLs, Títols de Pestanyes i Captures de Pantalla:</strong> L'extensió necessita conèixer l'adreça (URL), el títol i una captura de pantalla d'una pestanya per poder suspendre-la, mostrar-la a la galeria visual i restaurar-la correctament. Aquesta informació es guarda localment al teu perfil de navegador i s'utilitza únicament per a la funcionalitat de la galeria i la restauració.</li>
+            <li><strong>Configuració de l'Usuari:</strong> Les teves preferències, com el temps de suspensió automàtica, la llista blanca de llocs web que no s'han de suspendre i les dreceres de teclat personalitzades, es guarden utilitzant l'API d'emmagatzematge de Chrome (<code>chrome.storage.local</code>). Aquestes dades s'emmagatzemen exclusivament al teu perfil de navegador i no hi tenim accés.</li>
+        </ul>
+
+        <h2>3. PERMISOS DE L'EXTENSIÓ I LA SEVA JUSTIFICACIÓ</h2>
+        <p>Tabs Gallery sol·licita els següents permisos al teu navegador. Volem ser completament transparents sobre la necessitat de cadascun:</p>
+        <ul>
+            <li><strong><code>storage</code> (Emmagatzematge):</strong> Permet a l'extensió guardar les teves preferències de configuració i les dades de les teves pestanyes suspeses (títol, URL, captura de pantalla). Tota aquesta informació s'emmagatzema localment al teu navegador i és essencial perquè Tabs Gallery recordi els teus ajustos i les pestanyes que has guardat.</li>
+            <li><strong><code>alarms</code> (Alarmes):</strong> Utilitzat per programar la suspensió automàtica de pestanyes després d'un període d'inactivitat que tu defineixes. Funciona com un temporitzador intern per a una gestió eficient de la memòria. No s'utilitza per rastrejar la teva activitat.</li>
+            <li><strong><code>contextMenus</code> (Menús Contextuals):</strong> Ens permet afegir les opcions "Suspendre pestanya" o "Suspendre altres pestanyes" al menú contextual del navegador (clic dret) i a la icona de l'extensió, facilitant un accés ràpid a les seves funcions.</li>
+            <li><strong><code>activeTab</code> (Pestanya Activa):</strong> Necessari per interactuar amb la pestanya que tens actualment oberta. Això inclou fer captures de pantalla per a la teva galeria visual i obtenir la seva URL i títol quan la suspens. Aquest permís només s'activa quan interactues amb l'extensió i només afecta la pestanya activa en aquell instant. No ens dóna accés al teu historial de navegació ni a dades d'altres pestanyes.</li>
+            <li><strong><code>scripting</code> (Scripting):</strong> Aquest permís, en combinació amb <code>activeTab</code> i <code>host_permissions</code>, és fonamental per executar scripts necessaris a les pestanyes que vas a suspendre. Permet reemplaçar el contingut de la pestanya suspesa amb la nostra pàgina de marcador de posició i restaurar el contingut original quan la recuperes.</li>
+            <li><strong><code>host_permissions</code> : <code>&lt;all_urls&gt;</code> (Accés a totes les URLs):</strong> Aquest és un permís ampli, però el seu ús és estrictament limitat i justificat :
+                <ul>
+                    <li><strong>Captures de pantalla:</strong> És indispensable per poder fer una captura de pantalla de <em>qualsevol</em> pàgina web que decideixis suspendre i mostrar-la a la teva galeria visual.</li>
+                    <li><strong>Suspensió i Restauració:</strong> Permet "reemplaçar" el contingut de la pestanya suspesa amb la nostra pàgina de marcador de posició i, crucialment, restaurar la URL original de la pestanya quan la recuperes.</li>
+                </ul>
+                <p><strong>Garantia de Privacitat:</strong> Volem reiterar amb total claredat: <strong>Tabs Gallery NO llegeix, recopila, emmagatzema ni transmet cap dada personal, historial de navegació, contingut de pàgina web, contrasenyes o qualsevol altra informació sensible sobre la teva activitat en línia.</strong> L'accés a <code>&lt;all_urls&gt;</code> s'utilitza <em>exclusivament</em> per a les funcionalitats de captura de pantalla, suspensió i restauració de pestanyes. La teva informació roman al teu navegador, sota el teu control exclusiu. El nostre model de negoci es basa en oferir una eina útil i eficient per a la gestió de pestanyes, no en la recopilació de dades.</p>
+            </li>
+        </ul>
+
+        <h2>4. CANVIS EN AQUESTA POLÍTICA</h2>
+        <p>Qualsevol actualització futura d'aquesta política serà comunicada a través de les notes de la versió a la Chrome Web Store.</p>
+
+        <h2>5. CONTACTE</h2>
+        <p>Si tens alguna pregunta o preocupació sobre aquesta Política de Privacitat, no dubtis a contactar-nos a <span class="contact-email">tabstonap.hurricane803@simplelogin.com</span>.</p>
+    </div>
+</body>
+</html>

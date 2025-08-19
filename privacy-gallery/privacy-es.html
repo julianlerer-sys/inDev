@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs Gallery - Política de Privacidad</title>
+    <style>
+        /* Basic Styling - Customize these colors and fonts to match Tabs Gallery */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4; /* Light background, adjust to your brand color */
+            color: #333; /* Dark text, adjust to your brand color */
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #fff; /* White content background, adjust */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #8B038F; /* A shade of blue, adjust to your brand primary color */
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+        }
+        h2 {
+            font-size: 1.8em;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 1em;
+        }
+        ul li {
+            margin-bottom: 0.5em;
+        }
+        .logo-placeholder {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo-placeholder img {
+            max-width: 150px; /* Adjust logo size */
+            height: auto;
+        }
+        .contact-email {
+            font-weight: bold;
+            color: #0056b3; /* Adjust to your brand primary color */
+        }
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                margin: 10px auto;
+                padding: 20px;
+            }
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-placeholder">
+            <!-- Replace 'path/to/your/logo.png' with the actual path to your Tabs Gallery logo -->
+            <!-- If you don't have an image, you can remove the <img> tag and just put text like: -->
+            <!-- <h1>Tabs Gallery</h1> -->
+            <img src="logo.png" alt="Logo Tabs Gallery">
+        </div>
+
+        <h1>POLÍTICA DE PRIVACIDAD DE TABS GALLERY</h1>
+        <p><strong>Última actualización:</strong> 18 de agosto de 2025</p>
+
+        <p>Gracias por usar Tabs Gallery. Tu privacidad es de suma importancia para nosotros. Esta política detalla la información que la extensión maneja y las razones para ello.</p>
+
+        <h2>1. LA REGLA DE ORO: NO RECOPILAMOS DATOS PERSONALES</h2>
+        <p>Tabs Gallery ha sido diseñada con la privacidad como su principio fundamental. La extensión no recopila, almacena, comparte ni transmite ningún tipo de información personal o de navegación a nuestros servidores ni a los de terceros.</p>
+        <p>Todo el procesamiento y funcionamiento de la extensión se realiza exclusivamente en tu dispositivo (de forma local).</p>
+
+        <h2>2. INFORMACIÓN QUE LA EXTENSIÓN UTILIZA (LOCALMENTE)</h2>
+        <p>Para operar eficazmente, Tabs Gallery necesita acceder a cierta información de tu navegador. Es crucial entender que esta información nunca abandona tu máquina y se gestiona de forma segura y local:</p>
+        <ul>
+            <li><strong>URLs, Títulos y Capturas de Pantalla de Pestañas:</strong> La extensión necesita conocer la dirección (URL), el título y una captura de pantalla de una pestaña para poder suspenderla, mostrarla en la galería visual y restaurarla correctamente. Esta información se guarda localmente en tu perfil de navegador y se utiliza únicamente para la funcionalidad de la galería y la restauración.</li>
+            <li><strong>Configuración del Usuario:</strong> Tus preferencias, como el tiempo de suspensión automática, la lista de sitios web que no deben suspenderse (lista blanca) y los atajos de teclado personalizados, se guardan utilizando la API de almacenamiento de Chrome (<code>chrome.storage.local</code>). Estos datos se almacenan exclusivamente en tu perfil de navegador, y no tenemos acceso a ellos.</li>
+        </ul>
+
+        <h2>3. PERMISOS DE LA EXTENSIÓN Y SU JUSTIFICACIÓN</h2>
+        <p>Tabs Gallery solicita los siguientes permisos en tu navegador. Queremos ser completamente transparentes sobre la necesidad de cada uno:</p>
+        <ul>
+            <li><strong><code>storage</code> (Almacenamiento):</strong> Permite a la extensión guardar tus preferencias de configuración y los datos de tus pestañas suspesas (título, URL, captura de pantalla). Toda esta información se almacena localmente en tu navegador y es esencial para que Tabs Gallery recuerde tus ajustes y las pestañas que has guardado.</li>
+            <li><strong><code>alarms</code> (Alarmas):</strong> Utilizado para programar la suspensión automática de pestañas después de un período de inactividad que tú defines. Funciona como un temporizador interno para una gestión eficiente de la memoria. No se utiliza para rastrear tu actividad.</li>
+            <li><strong><code>contextMenus</code> (Menús Contextuales):</strong> Nos permite añadir opciones de "Suspender pestaña" o "Suspender otras pestañas" en el menú contextual del navegador (clic derecho) y en el icono de la extensión, facilitando un acceso rápido a sus funciones.</li>
+            <li><strong><code>activeTab</code> (Pestaña Activa):</strong> Necesario para interactuar con la pestaña que tienes actualmente abierta. Esto incluye tomar capturas de pantalla para tu galería visual y obtener su URL y título cuando la suspens. Este permiso solo se activa cuando interactúas con la extensión y solo afecta a la pestaña activa en aquel instante. No nos da acceso a tu historial de navegación ni a datos de otras pestañas.</li>
+            <li><strong><code>scripting</code> (Scripting):</strong> Este permiso, en combinación con <code>activeTab</code> y <code>host_permissions</code>, es fundamental para ejecutar scripts necesarios en las pestañas que vas a suspender. Permite reemplazar el contenido de la pestaña suspendida con nuestra página de marcador de posició y restaurar el contenido original cuando la recuperas.</li>
+            <li><strong><code>host_permissions</code> : <code>&lt;all_urls&gt;</code> (Acceso a todas las URLs):</strong> Este es un permiso amplio, pero su uso es estrictamente limitado y justificado:
+                <ul>
+                    <li><strong>Capturas de pantalla:</strong> Es indispensable para poder hacer una captura de pantalla de <em>cualquier</em> página web que decide suspender y mostrarla en tu galería visual.</li>
+                    <li><strong>Suspensión y Restauración:</strong> Permite "reemplazar" el contenido de la pestaña suspesa con nuestra página de marcador de posició y, crucialmente, restaurar la URL original de la pestaña cuando la recuperas.</li>
+                </ul>
+                <p><strong>Garantía de Privacidad:</strong> Queremos reiterar con total claridad: <strong>Tabs Gallery NO lee, recopila, almacena ni transmite ningún dato personal, historial de navegación, contenido de página web, contraseñas o cualquier otra información sensible sobre la tuya actividad en línea.</strong> El acceso a <code>&lt;all_urls&gt;</code> se utiliza <em>exclusivamente</em> para las funcionalidades de captura de pantalla, suspensión y restauración de pestañas. La tuya información permanece al tuyo navegador, bajo el tuyo control exclusivo. Nuestro modelo de negocio se basa en ofrecer una herramienta útil y eficiente para la gestión de pestañas, no en la recopilación de datos.</p>
+            </li>
+        </ul>
+
+        <h2>4. CAMBIOS EN ESTA POLÍTICA</h2>
+        <p>Cualquier actualización futura de esta política será comunicada a través de las notas de la versión en la Chrome Web Store.</p>
+
+        <h2>5. CONTACTO</h2>
+        <p>Si tienes alguna pregunta o preocupación sobre esta Política de Privacidad, no dudes a contactarnos a través de <span class="contact-email">tabstonap.hurricane803@simplelogin.com</span>.</p>
+    </div>
+</body>
+</html>
