@@ -2,29 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Tabs to Nap Privacy Policy</title>
-  <script>
-    const langMap = {
-      'es': 'privacy-es.html',
-      'en': 'privacy-en.html',
-      'fr': 'privacy-fr.html',
-      'ca': 'privacy-ca.html'
-    };
-    function redirectToLang() {
-      const userLang = navigator.language || navigator.userLanguage;
-      const lang = userLang.split('-')[0].toLowerCase();
-      const page = langMap[lang] || 'privacy-en.html';
-      window.location.replace(page);
+  <title>Tabs Gallery</title>
+ <script>
+  // Solo redirige si el usuario está en la raíz (index.html) y no ya en un archivo de idioma
+  if (window.location.pathname.endsWith('/') || window.location.pathname.endsWith('/index.html')) {
+    const supportedLangs = ['es', 'en', 'fr', 'ca'];
+    const navLang = (navigator.language || navigator.userLanguage || 'en').split('-')[0];
+    const lang = supportedLangs.includes(navLang) ? navLang : 'en';
+    // Redirige solo si no estás ya en esa página
+    if (!window.location.pathname.includes(`privacy-${lang}.html`)) {
+      window.location.href = `privacy-${lang}.html`;
     }
-    function showManual() {
-      document.getElementById('loading').style.display = 'none';
-      document.getElementById('manual-select').style.display = 'block';
-    }
-    window.onload = function() {
-      setTimeout(showManual, 2500); // Show manual choice after 2.5s
-      redirectToLang();
-    }
-  </script>
+  }
+</script>
   <style>
     body {
       font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
@@ -84,12 +74,26 @@
     Detecting browser language...<br>
     <span style="font-size:0.9rem; color:#888;">Si no eres redirigido, elige idioma abajo.</span>
   </div>
-  <div class="manual-select" id="manual-select">
-    <h2>Elige tu idioma / Choose your language</h2>
-    <button class="lang-btn" onclick="window.location.href='privacy-en.html'">English</button>
-    <button class="lang-btn" onclick="window.location.href='privacy-es.html'">Español</button>
-    <button class="lang-btn" onclick="window.location.href='privacy-fr.html'">Français</button>
-    <button class="lang-btn" onclick="window.location.href='privacy-ca.html'">Català</button>
-  </div>
+<div id="lang-selector">
+  <label for="langs">Idioma:</label>
+  <select id="langs" onchange="changeLang(this.value)">
+    <option value="es">Español</option>
+    <option value="en">English</option>
+    <option value="fr">Français</option>
+    <option value="ca">Català</option>
+  </select>
+</div>
+<script>
+  // Detecta la página actual y selecciona el idioma correcto en el dropdown
+  document.addEventListener('DOMContentLoaded', function () {
+    const current = window.location.pathname.match(/privacy-([a-z]{2})\.html/);
+    if(current && current[1]) {
+      document.getElementById('langs').value = current[1];
+    }
+  });
+  function changeLang(lang) {
+    window.location.href = `privacy-${lang}.html`;
+  }
+</script>
 </body>
 </html>
